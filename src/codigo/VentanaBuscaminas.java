@@ -312,6 +312,13 @@ public class VentanaBuscaminas extends javax.swing.JFrame {
             labelTime.setText("Tu partida ha durado: " + (tiempoFin - tiempoInicio) + " segundos");
             jDialog1.setTitle("¡Has ganado! ¿Otra partida?");
             jDialog1.setVisible(true);
+            for(int i = 0; i < filas; i++){
+                for(int j = 0; j < columnas; j++){
+                    if(arrayBotones[i][j].getMina() != 0){
+                        arrayBotones[i][j].setImagen(9);
+                    }
+                }
+            }
         } else if (!haGanado) {
             tiempoFin = System.currentTimeMillis() / 1000;
             labelWinLose.setForeground(Color.decode("#C54D4D"));
@@ -319,6 +326,13 @@ public class VentanaBuscaminas extends javax.swing.JFrame {
             labelTime.setText("Tu partida ha durado: " + (tiempoFin - tiempoInicio) + " segundos");
             jDialog1.setTitle("¡Has perdido! ¿Otra partida?");
             jDialog1.setVisible(true);
+            for(int i = 0; i < filas; i++){
+                for(int j = 0; j < columnas; j++){
+                    if(arrayBotones[i][j].getMina() != 0){
+                        arrayBotones[i][j].setImagen(11);
+                    }
+                }
+            }
         }
     }
 

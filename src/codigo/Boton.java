@@ -88,6 +88,7 @@ public class Boton extends JButton {
             case 8: nombre = "8"; break;
             case 9: nombre = "bandera"; break;
             case 10: nombre = "celda"; break;
+            case 11: nombre = "bomba"; break;
             
         }
         String ruta = "/img/" + nombre + ".png";
